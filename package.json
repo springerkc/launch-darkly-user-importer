@@ -1,0 +1,22 @@
+{
+  "name": "launch-darkly-user-importer",
+  "version": "1.0.0",
+  "description": "A simple scripting app to import users to LaunchDarkly for identifcation",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start:dev": "enviro=test node dist/index.js",
+    "start:prod": "enviro=production node dist/index.js",
+    "import:test": "tsc && enviro=test node dist/index.js",
+    "import:prod": "tsc && enviro=production node dist/index.js"
+  },
+  "author": "@springerkc",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "launchdarkly-node-client-sdk": "^1.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.11"
+  }
+}
